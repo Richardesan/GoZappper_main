@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  src: url('/src/assets/AvenirNextCyr/AvenirNextCyr-Regular.woff') format('woff'),
+       url('/src/assets/AvenirNextCyr/AvenirNextCyr-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.button-style {
+  margin-block: 1.5rem;
+  font-weight: 700;
+  border-radius: 0.375rem;
+}
+
+.text-lightGreen {
+  color: #90EE90; /* Light green color */
+}
+
+.hover\:text-lightGreen:hover {
+  color: #90EE90;
+}
+
+@keyframes borderSnake {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 0%;
+  }
+}
+
+.animate-border-snake {
+  background: linear-gradient(90deg, #007bff, #007bff 25%, transparent 25%, transparent 50%, #007bff 50%, #007bff 75%, transparent 75%, transparent 100%) 0 0 / 200% 100%;
+  background-origin: border-box;
+  background-clip: border-box;
+  animation: borderSnake 4s linear infinite;
+  padding: 2px;
+}
